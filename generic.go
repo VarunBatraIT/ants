@@ -38,6 +38,16 @@ func (s OneOfManyStrings) sample() string {
 	return SampleString(s)
 }
 
+func (s OneOfManyMaps) sample() string {
+	rKeys := reflect.ValueOf(s).MapKeys()
+	var keys []string
+	for _,eachKey := range rKeys {
+		keys = append(keys,eachKey.String())
+	}
+	randomKey := SampleString(keys)
+	return SampleString(s[randomKey])
+}
+
 // Gives a sample string
 func SampleString(s []string) string {
 	return s[rand.Intn(len(s))]

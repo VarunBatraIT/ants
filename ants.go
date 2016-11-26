@@ -10,11 +10,13 @@ import (
 var o Words
 
 type Words struct {
-	Hashable      OneOfManyStrings `json:"hashable"`
-	UserAgents      OneOfManyStrings `json:"user_agents"`
+	Hashable      OneOfManyStrings
+	UserAgents      OneOfManyStrings `yaml:"user_agents"`
+	Blogs OneOfManyMaps
 }
 type OneOfManyStrings []string
 
+type OneOfManyMaps map[string][]string
 
 func init() {
 	words, err := ioutil.ReadFile("./ants.yml")
@@ -32,5 +34,4 @@ func init() {
 }
 
 func main() {
-
 }
