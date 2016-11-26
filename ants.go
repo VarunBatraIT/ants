@@ -7,12 +7,13 @@ import (
 
 	"gopkg.in/yaml.v2"
 )
-var o Words
 
-type Words struct {
-	Hashable      OneOfManyStrings
-	UserAgents      OneOfManyStrings `yaml:"user_agents"`
-	Blogs OneOfManyMaps
+var o Ants
+
+type Ants struct {
+	Hashable   OneOfManyStrings
+	UserAgents OneOfManyStrings `yaml:"user_agents"`
+	Blogs      OneOfManyMaps
 }
 type OneOfManyStrings []string
 
@@ -24,7 +25,7 @@ func init() {
 		log.Fatalln("Unable to load words")
 		os.Exit(1)
 	}
-	log.Println("Setting up Generator")
+	log.Println("Loading Settings")
 	err = yaml.Unmarshal((words), &o)
 	if err != nil {
 		log.Println(err)
