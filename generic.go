@@ -38,12 +38,18 @@ func (s OneOfManyStrings) sample() string {
 	return SampleString(s)
 }
 
-func (s OneOfManyMaps) sample() string {
+func collectKeys(s interface{}) []string {
+	log.Println(reflect.TypeOf(s))
 	rKeys := reflect.ValueOf(s).MapKeys()
 	var keys []string
 	for _,eachKey := range rKeys {
 		keys = append(keys,eachKey.String())
 	}
+	return keys;
+}
+
+func (s OneOfManyMaps) sample() string {
+	keys := collectKeys(s)
 	randomKey := SampleString(keys)
 	return SampleString(s[randomKey])
 }
