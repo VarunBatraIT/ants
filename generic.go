@@ -58,3 +58,13 @@ func (s OneOfManyMaps) sample() string {
 func SampleString(s []string) string {
 	return s[rand.Intn(len(s))]
 }
+
+
+func Truncate(s string, i int) string {
+	runes := []rune(s)
+	if len(runes) > i {
+		return string(runes[:i])
+	}
+	return s
+}
+

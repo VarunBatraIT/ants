@@ -7,12 +7,14 @@ import (
 
 	"gopkg.in/yaml.v2"
 )
+
 var c Credentials
 var o Ants
+
 type Credentials struct {
 	Linkedin OneOfOneMap
 	Facebook OneOfOneMap
-	Twitter OneOfOneMap
+	Twitter  OneOfOneMap
 }
 
 type Ants struct {
@@ -23,7 +25,6 @@ type Ants struct {
 type OneOfManyStrings []string
 type OneOfManyMaps map[string][]string
 type OneOfOneMap map[string]string
-
 
 func readSettings(variable interface{}, fileName string) {
 	words, err := ioutil.ReadFile(fileName)
@@ -41,9 +42,8 @@ func readSettings(variable interface{}, fileName string) {
 }
 
 func init() {
-	readSettings(&o,"ants.yml")
-	readSettings(&c,"credentials.yml")
-
+	readSettings(&o, "ants.yml")
+	readSettings(&c, "credentials.yml")
 }
 
 func main() {
