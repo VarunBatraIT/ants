@@ -1,0 +1,94 @@
+hashable:
+  - redis
+  - mysql
+  - mongodb
+  - php
+  - golang
+  - hire
+  - hiring
+  - ui
+  - bonus
+  - laravel
+  - rails
+  - design
+  - ux
+blogs:
+  marketing:
+    - "https://feeds.feedburner.com/Unbounce?alt=rss"
+  leadership:
+    - "http://www.leadershipnow.com/leadingblog/atom.xml"
+    - "https://www.hrbartender.com/feed/"
+    - "http://feeds.feedblitz.com/artpetty&x=1"
+    - "http://feeds.feedburner.com/TanveerNaseer?format=xml"
+  technical:
+    - "http://www.vertabelo.com/_rss/blog.xml"
+    - "http://www.stevesouders.com/blog/feed/"
+    - "http://www.phpied.com/feed/"
+    - "http://blog.catchpoint.com/feed/"
+    - "http://laughingmeme.org/feed/atom/"
+    - "http://datacharmer.blogspot.com/feeds/posts/default"
+    - "http://www.dr-josiah.com/feeds/posts/default"
+    - "http://www.cedexis.com/feed/"
+    - "http://andraz.wpengine.com/feed/"
+    - "https://codeascraft.com/feed/"
+    - "https://www.subbu.org/feed"
+    - "https://www.xaprb.com/index.xml"
+    - "https://erikbern.com/atom.xml"
+    - "https://mwop.net/blog/atom.xml"
+    - "https://jeremykun.com/feed/"
+    - "https://www.toptal.com/blog.rss"
+    - "https://blogs.dropbox.com/tech/feed/"
+    - "https://www.percona.com/blog/feed/"
+    - "https://bosnadev.com/feed/"
+user_agents:
+  - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/600.7.12 (KHTML, like Gecko) Version/8.0.7 Safari/600.7.12"
+praise:
+  withVery:
+    - intelligent
+    - handsome
+  withoutVery:
+    - a genius
+    - awesome
+insult:
+  withVery:
+    - stupid
+    - ugly
+  withoutVery:
+    - pathetic
+sentence:
+  present:
+    continuous:
+      he: "he is"
+      she: "she is"
+      they: "they are"
+      you: "you are"
+      i: "i am"
+self_marketing:
+  who:
+    - I am a Web Application Consultant.
+    - I am a Web Application Expert.
+    - I am an Expert in Web Applications.
+  what:
+    - I help businesses in developing Web Application at reasonable cost, quick and on a solid platform.
+    - I help startups in developing Web Applications quickly with a suitable technology.
+    - If you have a project, consider hiring me to save your time and money.
+    - I have helped many startups and I can help you too.
+  contact:
+    - Call me at +9188820VARUN or Skype at VarunBatraIT
+    - "Let's chat on Skype: VarunBatraIT or give me a call at +9188820VARUN"
+job_summary:
+  contact:
+    - "Let's chat on Skype: VarunBatraIT or email me at CodeVarun[@]gmail.com"
+    - Call me +918882082786 or email me at CodeVarun[@]gmail.com
+  looking_for:
+    - "We are looking for a Laravel PHP Expert with at least 2 years of experience and should have worked on at least two projects."
+    - "We are looking for a Laravel expert with a hand's-on experience in at least two projects."
+  marketing_text:
+    - If scalability excites you and you believe that you are born for a challenge, then this is for you.
+    - This is a great opportunity for a challenge-seeker. We have scalability and continuous integration on your plate.
+  join_us:
+    - Come and join us in the land of rocks and talent, Kota, Rajasthan. We provide joining bonus.
+    - This opportunity is for Kota, Rajasthan location. We provide joining bonus.
+  growth:
+    - Not only we provide massive increments but what you will learn in job will certainly help in your career growth.
+    - With all the knowledge and attractive increments, you will get a tremendous growth with us.

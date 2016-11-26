@@ -1,0 +1,44 @@
+package main
+
+import (
+	"log"
+	"math/rand"
+	"reflect"
+	"regexp"
+	"strings"
+)
+
+func in_array(v interface{}, in interface{}) (ok bool, i int) {
+	val := reflect.Indirect(reflect.ValueOf(in))
+	switch val.Kind() {
+	case reflect.Slice, reflect.Array:
+		for ; i < val.Len(); i++ {
+			if ok = v == val.Index(i).Interface(); ok {
+				return
+			}
+		}
+	}
+	return
+}
+func alphanumericsmall(str string) string {
+	reg, err := regexp.Compile("[^A-Za-z0-9]+")
+	if err != nil {
+		log.Fatal(err)
+	}
+	safe := reg.ReplaceAllString(str, "")
+	safe = strings.ToLower(safe)
+	return safe
+}
+
+type sample interface {
+	sample()
+}
+
+func (s OneOfManyStrings) sample() string {
+	return SampleString(s)
+}
+
+// Gives a sample string
+func SampleString(s []string) string {
+	return s[rand.Intn(len(s))]
+}
