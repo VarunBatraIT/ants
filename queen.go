@@ -19,7 +19,5 @@ func scheduler() {
 		log.Println(location)
 		c = cron.NewWithLocation(location)
 	}
-//	c.AddFunc("* * * * * *",func() {
-//	})
 	c.Start()
 }
