@@ -5,13 +5,14 @@ import (
 
 	"github.com/parnurzeal/gorequest"
 )
+
 type Linkedin struct {
-	comment string
-	title string
+	comment     string
+	title       string
 	description string
-	url string
-	img string
-	code string
+	url         string
+	img         string
+	code        string
 }
 
 var linkedinKey, linkedinSecret, linkedinToken string
@@ -20,12 +21,9 @@ func init() {
 	linkedinKey = c.Linkedin["key"]
 	linkedinSecret = c.Linkedin["secret"]
 	linkedinToken = c.Linkedin["token"]
-	l := Linkedin{comment: "Testing API"}
-	PostOnLinkedin(l)
-	log.Println(l)
 }
 
-func fixLinkedin(l *Linkedin){
+func fixLinkedin(l *Linkedin) {
 	l.comment = Truncate(l.comment, 700)
 	l.title = Truncate(l.title, 200)
 	l.description = Truncate(l.description, 256)

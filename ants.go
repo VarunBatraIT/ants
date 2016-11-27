@@ -21,6 +21,7 @@ type Ants struct {
 	Hashable   OneOfManyStrings
 	UserAgents OneOfManyStrings `yaml:"user_agents"`
 	Blogs      OneOfManyMaps
+	JobSummary    `yaml:"job_summary"`
 }
 type OneOfManyStrings []string
 type OneOfManyMaps map[string][]string
@@ -46,6 +47,12 @@ func init() {
 	readSettings(&c, "credentials.yml")
 }
 
-func main() {
+func forever () {
+	var forever chan int
+	<- forever
 
+}
+func main() {
+	log.Println(o.JobSummary)
+	scheduler()
 }

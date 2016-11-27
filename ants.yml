@@ -77,18 +77,18 @@ self_marketing:
     - Call me at +9188820VARUN or Skype at VarunBatraIT
     - "Let's chat on Skype: VarunBatraIT or give me a call at +9188820VARUN"
 job_summary:
-  contact:
-    - "Let's chat on Skype: VarunBatraIT or email me at CodeVarun[@]gmail.com"
-    - Call me +918882082786 or email me at CodeVarun[@]gmail.com
   looking_for:
     - "We are looking for a Laravel PHP Expert with at least 2 years of experience and should have worked on at least two projects."
     - "We are looking for a Laravel expert with a hand's-on experience in at least two projects."
   marketing_text:
     - If scalability excites you and you believe that you are born for a challenge, then this is for you.
     - This is a great opportunity for a challenge-seeker. We have scalability and continuous integration on your plate.
-  join_us:
-    - Come and join us in the land of rocks and talent, Kota, Rajasthan. We provide joining bonus.
-    - This opportunity is for Kota, Rajasthan location. We provide joining bonus.
   growth:
     - Not only we provide massive increments but what you will learn in job will certainly help in your career growth.
     - With all the knowledge and attractive increments, you will get a tremendous growth with us.
+  join_us:
+    - Come and join us in the land of rocks and talent, Kota, Rajasthan. We provide joining bonus.
+    - This opportunity is for Kota, Rajasthan location. We provide joining bonus.
+  contact:
+    - "Let's chat on Skype: VarunBatraIT or email me at CodeVarun[@]gmail.com"
+    - Call me +918882082786 or email me at CodeVarun[@]gmail.com
