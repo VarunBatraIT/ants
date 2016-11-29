@@ -57,10 +57,10 @@ func PostOnLinkedin(l Linkedin) {
 		  }
 		}`
 	}
-	log.Println(sendString)
+	log.Println("Sharing on linkedin " + sendString)
 	request := gorequest.New()
 	_, body, err := request.Post(uri).
-		Set("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/600.7.12 (KHTML, like Gecko) Version/8.0.7 Safari/600.7.12").
+		Set("User-Agent", o.UserAgents.sample()).
 		Set("Content-Type", "application/json").
 		Set("x-li-format", "json").
 		Set("Authorization", "Bearer "+linkedinToken).
