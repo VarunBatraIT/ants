@@ -35,30 +35,31 @@ type sample interface {
 }
 
 func (s OneOfManyStrings) sample() string {
-	return SampleString(s)
+	return SampleString(s).(string)
 }
 
 func collectKeys(s interface{}) []string {
-	log.Println(reflect.TypeOf(s))
 	rKeys := reflect.ValueOf(s).MapKeys()
 	var keys []string
-	for _,eachKey := range rKeys {
-		keys = append(keys,eachKey.String())
+	for _, eachKey := range rKeys {
+		keys = append(keys, eachKey.String())
 	}
-	return keys;
+	return keys
 }
 
 func (s OneOfManyMaps) sample() string {
 	keys := collectKeys(s)
-	randomKey := SampleString(keys)
-	return SampleString(s[randomKey])
+	randomKey := SampleString(keys).(string)
+	return SampleString(s[randomKey]).(string)
 }
 
 // Gives a sample string
-func SampleString(s []string) string {
-	return s[rand.Intn(len(s))]
+func SampleString(s interface{}) interface{} {
+	vs := reflect.ValueOf(s)
+	index := rand.Intn(vs.Len())
+	val := vs.Index(index)
+	return val.Interface()
 }
-
 
 func Truncate(s string, i int) string {
 	runes := []rune(s)
@@ -67,4 +68,3 @@ func Truncate(s string, i int) string {
 	}
 	return s
 }
-

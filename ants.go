@@ -53,6 +53,6 @@ func forever () {
 
 }
 func main() {
-	log.Println(o.JobSummary)
+	forever()
 	scheduler()
 }

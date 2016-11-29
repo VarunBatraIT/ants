@@ -1,6 +1,7 @@
 package main
 
 import (
+	"reflect"
 	"github.com/mmcdole/gofeed"
 	"github.com/parnurzeal/gorequest"
 )
@@ -22,8 +23,25 @@ func ReadBlogFeed(rss_uri string) (*gofeed.Feed, error) {
 
 func GetBlogFeed(typeOfBlog string) string {
 	if val, ok := o.Blogs[typeOfBlog]; ok {
-		return SampleString(val)
+		blog := SampleString(val)
+		return reflect.ValueOf(blog).String()
+
 	} else {
 		return o.Blogs.sample()
 	}
+}
+
+func GetBlogFeedItem(feed *gofeed.Feed) *gofeed.Item {
+	return SampleString(feed.Items).(*gofeed.Item)
+}
+
+func PostBlogOnLinkedin(typeOfBlog string) {
+	rss_uri := GetBlogFeed(typeOfBlog)
+	feed, err := ReadBlogFeed(rss_uri)
+	item := GetBlogFeedItem(feed)
+	if err == nil {
+		toPost := Linkedin{comment: item.Title + " " + item.Link}
+		PostOnLinkedin(toPost)
+	}
+
 }
