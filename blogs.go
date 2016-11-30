@@ -38,10 +38,18 @@ func GetBlogFeedItem(feed *gofeed.Feed) *gofeed.Item {
 func PostBlogOnLinkedin(typeOfBlog string) {
 	rss_uri := GetBlogFeed(typeOfBlog)
 	feed, err := ReadBlogFeed(rss_uri)
-	item := GetBlogFeedItem(feed)
 	if err == nil {
+		item := GetBlogFeedItem(feed)
 		toPost := Linkedin{comment: item.Title + " " + item.Link}
 		PostOnLinkedin(toPost)
 	}
-
+}
+func PostBlogOnTwitter(typeOfBlog string) {
+	rss_uri := GetBlogFeed(typeOfBlog)
+	feed, err := ReadBlogFeed(rss_uri)
+	if err == nil {
+		item := GetBlogFeedItem(feed)
+		toPost := Twitter{comment: item.Title + " " + item.Link}
+		PostOnTwitter(toPost)
+	}
 }

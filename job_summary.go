@@ -31,5 +31,5 @@ func PostJobOnLinkedin(){
 func PostJobOnTwitter(){
 	jobSummary := GetJobSummary()
 	twitter := Twitter{comment: jobSummary}
-	PostOnLinkedin(twitter)
+	PostOnTwitter(twitter)
 }

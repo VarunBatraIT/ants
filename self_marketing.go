@@ -24,3 +24,9 @@ func PostSelfMarketingOnLinkedin() {
 	linkedin := Linkedin{comment: selfMarketing}
 	PostOnLinkedin(linkedin)
 }
+
+func PostSelfMarketingOnTwitter() {
+	selfMarketing := GetSelfMarketing()
+	twitter := Twitter{comment: selfMarketing}
+	PostOnTwitter(twitter)
+}
