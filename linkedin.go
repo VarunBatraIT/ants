@@ -24,7 +24,8 @@ func init() {
 }
 
 func fixLinkedin(l *Linkedin) {
-	l.comment = Truncate(l.comment, 700)
+	// Add linkedin hashes!
+	l.comment = AddHashes(Truncate(l.comment, 700),LINKEDIN_HASH)
 	l.title = Truncate(l.title, 200)
 	l.description = Truncate(l.description, 256)
 }

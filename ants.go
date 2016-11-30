@@ -20,7 +20,7 @@ type Credentials struct {
 type Ants struct {
 	Hashable   OneOfManyStrings
 	UserAgents OneOfManyStrings `yaml:"user_agents"`
-	Blogs      OneOfManyMaps
+	Blogs OneOfManyMaps `yaml:"blogs"`
 	JobSummary    `yaml:"job_summary"`
 }
 type OneOfManyStrings []string
@@ -29,7 +29,7 @@ type OneOfOneMap map[string]string
 
 func readSettings(variable interface{}, fileName string) {
 	words, err := ioutil.ReadFile(fileName)
-	log.Println("Loading Settings!")
+	log.Println("Loading Settings "+fileName+"!")
 	if err != nil {
 		log.Fatalln("Unable to load settings")
 		os.Exit(1)

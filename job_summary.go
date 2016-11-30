@@ -23,3 +23,8 @@ func (j JobSummary) generate() string {
 func GetJobSummary() string {
 	return o.JobSummary.generate()
 }
+func PostJobOnLinkedin(){
+	jobSummary := GetJobSummary()
+	linkedin := Linkedin{comment: jobSummary}
+	PostOnLinkedin(linkedin)
+}

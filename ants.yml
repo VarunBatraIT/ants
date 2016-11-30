@@ -12,6 +12,8 @@ hashable:
   - rails
   - design
   - ux
+  - expert
+  - marketing
 blogs:
   marketing:
     - "https://feeds.feedburner.com/Unbounce?alt=rss"
