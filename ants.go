@@ -22,6 +22,7 @@ type Ants struct {
 	UserAgents OneOfManyStrings `yaml:"user_agents"`
 	Blogs OneOfManyMaps `yaml:"blogs"`
 	JobSummary    `yaml:"job_summary"`
+	SelfMarketing `yaml:"self_marketing"`
 }
 type OneOfManyStrings []string
 type OneOfManyMaps map[string][]string
