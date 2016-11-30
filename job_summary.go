@@ -28,3 +28,8 @@ func PostJobOnLinkedin(){
 	linkedin := Linkedin{comment: jobSummary}
 	PostOnLinkedin(linkedin)
 }
+func PostJobOnTwitter(){
+	jobSummary := GetJobSummary()
+	twitter := Twitter{comment: jobSummary}
+	PostOnLinkedin(twitter)
+}

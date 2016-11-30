@@ -18,9 +18,9 @@ type Credentials struct {
 }
 
 type Ants struct {
-	Hashable   OneOfManyStrings
-	UserAgents OneOfManyStrings `yaml:"user_agents"`
-	Blogs OneOfManyMaps `yaml:"blogs"`
+	Hashable      OneOfManyStrings
+	UserAgents    OneOfManyStrings `yaml:"user_agents"`
+	Blogs         OneOfManyMaps    `yaml:"blogs"`
 	JobSummary    `yaml:"job_summary"`
 	SelfMarketing `yaml:"self_marketing"`
 }
@@ -30,7 +30,7 @@ type OneOfOneMap map[string]string
 
 func readSettings(variable interface{}, fileName string) {
 	words, err := ioutil.ReadFile(fileName)
-	log.Println("Loading Settings "+fileName+"!")
+	log.Println("Loading Settings " + fileName + "!")
 	if err != nil {
 		log.Fatalln("Unable to load settings")
 		os.Exit(1)
@@ -48,9 +48,9 @@ func init() {
 	readSettings(&c, "credentials.yml")
 }
 
-func forever () {
+func forever() {
 	var forever chan int
-	<- forever
+	<-forever
 
 }
 func main() {
