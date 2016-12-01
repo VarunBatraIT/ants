@@ -13,11 +13,15 @@ hashable:
   - design
   - ux
   - expert
+  - experts
   - marketing
   - kota
   - leadership
-  - manager
+  - leaderships
+  - managers
   - management
+  - lead
+  - conversion
 blogs:
   marketing:
     - "https://feeds.feedburner.com/Unbounce?alt=rss"
