@@ -3,6 +3,8 @@ hashable:
   - mysql
   - mongodb
   - php
+  - jquery
+  - javascript
   - golang
   - hire
   - hiring
@@ -18,6 +20,7 @@ hashable:
   - kota
   - leadership
   - leaderships
+  - manager
   - managers
   - management
   - lead
