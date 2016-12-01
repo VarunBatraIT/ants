@@ -54,6 +54,6 @@ func forever() {
 
 }
 func main() {
-	forever()
 	scheduler()
+	forever()
 }
