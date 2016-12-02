@@ -2,6 +2,7 @@ package main
 
 import (
 	"reflect"
+
 	"github.com/mmcdole/gofeed"
 	"github.com/parnurzeal/gorequest"
 )
@@ -40,6 +41,10 @@ func PostBlogOnLinkedin(typeOfBlog string) {
 	feed, err := ReadBlogFeed(rss_uri)
 	if err == nil {
 		item := GetBlogFeedItem(feed)
+		link, errArr := expandUrl(item.Link)
+		if errArr == nil {
+			item.Link = link
+		}
 		toPost := Linkedin{comment: item.Title + " " + item.Link}
 		PostOnLinkedin(toPost)
 	}
@@ -49,6 +54,10 @@ func PostBlogOnTwitter(typeOfBlog string) {
 	feed, err := ReadBlogFeed(rss_uri)
 	if err == nil {
 		item := GetBlogFeedItem(feed)
+		link, errArr := expandUrl(item.Link)
+		if errArr == nil {
+			item.Link = link
+		}
 		toPost := Twitter{comment: item.Title + " " + item.Link}
 		PostOnTwitter(toPost)
 	}
