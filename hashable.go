@@ -16,6 +16,7 @@ func AddHashes(str string, total int) string {
 		total = len(words)
 	}
 	for i := 0; i < len(words); i++ {
+		words[i] = strings.Replace(words[i], "#", "", -1)
 		ok, _ := in_array(alphanumericsmall(words[i]), o.Hashable)
 		if ok && total > -1 {
 			words[i] = "#" + words[i]
