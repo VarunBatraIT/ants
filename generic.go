@@ -6,7 +6,18 @@ import (
 	"reflect"
 	"regexp"
 	"strings"
+
+	"github.com/parnurzeal/gorequest"
 )
+
+func expandUrl(uri string) (string, []error) {
+	request := gorequest.New()
+	res, _, err := request.Get(uri).
+		Set("User-Agent", o.UserAgents.sample()).
+		End()
+
+	return res.Request.URL.String(),err
+}
 
 func in_array(v interface{}, in interface{}) (ok bool, i int) {
 	val := reflect.Indirect(reflect.ValueOf(in))

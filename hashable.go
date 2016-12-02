@@ -4,7 +4,6 @@ import "strings"
 
 //Hashes in twitter
 var TWITTER_HASH = 3
-
 //Hashes in linked
 var LINKEDIN_HASH = 2
 
@@ -15,7 +14,7 @@ func RemoveHashes(str string) string {
 			words[i] = strings.Replace(words[i], "#", "", -1)
 		}
 	}
-	str = strings.Join(words," ")
+	str = strings.Join(words, " ")
 	return str
 }
 
