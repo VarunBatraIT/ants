@@ -26,5 +26,6 @@ func fixTwitter(t *Twitter) {
 }
 
 func PostOnTwitter(t Twitter) {
+	fixTwitter(&t)
 	api.PostTweet(t.comment, nil)
 }
