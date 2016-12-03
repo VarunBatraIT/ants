@@ -29,6 +29,7 @@ func in_array(v interface{}, in interface{}) (ok bool, i int) {
 			}
 		}
 	}
+	i = -1
 	return
 }
 func alphanumericsmall(str string) string {

@@ -42,7 +42,9 @@ func Test_in_array(t *testing.T) {
 		wantOk bool
 		wantI  int
 	}{
-	// TODO: Add test cases.
+		// TODO: Add test cases.
+		{"Test True", args{v: "go", in: [2]string{"go", "great"}}, true, 0},
+		{"Test False", args{v: 1, in: [2]int{0, 2}}, false, -1},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
@@ -66,7 +68,9 @@ func Test_alphanumericsmall(t *testing.T) {
 		args args
 		want string
 	}{
-	// TODO: Add test cases.
+		// TODO: Add test cases.
+		{"Test alphanumeric", args{str: "go#go"}, "gogo"},
+		{"Test alphanumeric", args{str: "go#1go"}, "go1go"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
