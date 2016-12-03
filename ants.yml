@@ -3,6 +3,7 @@ hashable:
   - analytics
   - bonus
   - bonuses
+  - cache
   - conversion
   - ratio
   - design
@@ -26,6 +27,7 @@ hashable:
   - mongodb
   - mysql
   - php
+  - php7
   - rails
   - ruby
   - redis

@@ -22,6 +22,7 @@ func scheduler() {
 	// Post self marketing!
 	c.AddFunc("0 30 8 * * 1,6", func(){
 		PostSelfMarketingOnLinkedin()
+		PostSelfMarketingOnTwitter()
 	})
 	// Post jobs!
 	c.AddFunc("0 30 8 * * 1,6", func(){
